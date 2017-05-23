@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["10.117.170.206"]
 
+#add by wyp
+APPEND_SLASH = False
 
 # Application definition
 
