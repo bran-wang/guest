@@ -86,3 +86,9 @@ def sign_index_action(request, eid):
         return render(request, 'sign_index.html', {'event':event, 'hint':'user has sign in.', 'guest':guest_count, 'sign':sign_count})
     else:
         return render(request, 'sign_index.html', {'event':event, 'hint':'sign in success', 'guest':guest_count, 'sign':sign_count})
+
+@login_required
+def logout(request):
+    auth.logout(request)
+    response = HttpResponseRedirect('/index/')
+    return response
